@@ -1,41 +1,79 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="CSS/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+      integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="CSS/style.css" />
     <title>ShopEase | Online Store</title>
-</head>
-<body>
-         <!-- NavBar Start -->
-        
-         <header>
-            <nav class="navbar">
-                <div class="logo">
-                    <a href="#">Shop<span>Ease</span></a>
-                </div>
-                <div class="search-box">
-                    <input type="text" placeholder="Search products...">
-                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
-                </div>
-                <ul class="navLinks">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">Categories</a></li>
-                </ul>
+  </head>
+  <body>
+    <!-- NavBar Start -->
 
-                <div class="cart-icon">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <span id="cartCount">0</span>
-                </div>
-                <div class="menuBar">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
-            </nav>
-         </header>
-    
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="#">Shop<span>Ease</span></a>
+        </div>
+        <div class="search-box">
+          <input type="text" class="input" placeholder="Search products..." />
+          <button class="searchIcon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+        <ul class="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Categories</a></li>
+        </ul>
+
+        <div class="cart-icon">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span id="cartCount">0</span>
+        </div>
+        <div class="menuBar">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </nav>
+    </header>
+
+    <section class="heroContainer">
+        <div class="hero-content">
+            <h1>Shop Smart.  Live Better</h1>
+            <p>Discover the latest products at great prices. Shop your favorites with a smooth,simple,and secure online shopping experience.</p>
+            <a href="#products" class="btn">Shop Now</a>
+        </div>
+    </section>
+
+
+    <section class="categories">
+        <h2>Shop By Categories</h2>
+        <div class="categorie-grid">
+            <div class="categorie-card">
+                <i class="fa-solid fa-laptop"></i>
+                <h3>Electronics</h3>
+            </div>
+             <div class="categorie-card">
+                <i class="fa-solid fa-shirt"></i>
+                <h3>Fashion</h3>
+            </div>
+             <div class="categorie-card">
+                <i class="fa-solid fa-couch"></i>
+                <h3>Home & Living</h3>
+            </div>
+             <div class="categorie-card">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+                <h3>Mobiles</h3>
+            </div>     
+        </div>
+    </section>
 
     <script src="JS/script.js"></script>
-</body>
+  </body>
 </html>
