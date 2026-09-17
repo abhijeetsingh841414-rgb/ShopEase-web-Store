@@ -22,7 +22,7 @@
           <a href="#">Shop<span>Ease</span></a>
         </div>
         <div class="search-box">
-          <input type="text" class="input" placeholder="Search products..." />
+          <input type="text" id="search-input" class="input" placeholder="Search products..." />
           <button class="searchIcon">
             <i class="fa-solid fa-magnifying-glass"></i>
           </button>
@@ -59,21 +59,21 @@
     <!-- card section -->
 
     <section class="categories">
-      <h2>Shop By Categories</h2>
-      <div class="categorie-grid">
-        <div class="categorie-card">
+      <h2>Shop By Category</h2>
+      <div class="category-grid">
+        <div class="category-card" data-category="All">
+          <i class="fa-solid fa-border-all"></i>
+          <h3>ALl Products</h3>
+        </div>
+        <div class="category-card" data-category="Electronics">
           <i class="fa-solid fa-laptop"></i>
           <h3>Electronics</h3>
         </div>
-        <div class="categorie-card">
+        <div class="category-card" data-category="Fashion">
           <i class="fa-solid fa-shirt"></i>
           <h3>Fashion</h3>
         </div>
-        <div class="categorie-card">
-          <i class="fa-solid fa-couch"></i>
-          <h3>Home & Living</h3>
-        </div>
-        <div class="categorie-card">
+        <div class="category-card" data-category="Mobiles">
           <i class="fa-solid fa-mobile-screen-button"></i>
           <h3>Mobiles</h3>
         </div>
@@ -129,7 +129,7 @@
             <img id="modal-img" src="image/adidas-shoes4.jpg" alt="product image">
           </div>
           <div class="modalInfo">
-            <h2 class="modalTitle">MEN - adidas - shoes</h2>
+            <h2 class="modalTitle" id="modalTitle">MEN - adidas - shoes</h2>
             <p class="modal-category" id="modal-category">Category:  MEN - Shoes</p>
             <p class="modalPrice" id="modalPrice">₹ 2,456</p>
             <p class="modal-description" id="modal-description">
@@ -141,7 +141,7 @@
       </div>
     </div>
     
-
+    <script src="JS/products.js"></script>
     <script src="JS/script.js"></script>
   </body>
 </html>
