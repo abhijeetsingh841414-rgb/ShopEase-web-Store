@@ -3,7 +3,8 @@ const productGrid = document.getElementById("productGrid");
 const productModal = document.getElementById("product-modal");
 const closeBtn = document.querySelector(".closeBtn");
 const searchInput = document.getElementById("search-input");
-const categoryCards = document.querySelectorAll(".category-card")
+const categoryCards = document.querySelectorAll(".category-card");
+const cartCountElement = document.getElementById("cartCount");
 
 
 //  Rider Products in js
@@ -34,12 +35,46 @@ function productDisplay(items){
 }
 
 
+let cart = JSON.parse(localStorage.getItem('shopeaseCart')) || [];
+
+function updateCartCount(){
+    const totalItem = cart.reduce((sum, item) => sum + item.quantity, 0)
+    cartCountElement.textContent = totalItem;
+}
+
+function saveItem(){
+    localStorage.setItem('shopeaseCart', JSON.stringify(cart));
+    updateCartCount();
+}
+
+function addToCart(id){
+    const product = products.find(p => p.id === id);
+    if(!product) return;
+
+    const existingItem = cart.find(item => item.id === id);
+
+    if(existingItem){
+        existingItem.quantity += 1;
+    }
+    else{
+        cart.push({
+            id : product.id,
+            title : product.title,
+            price : product.price,
+            image : product.image,
+            quantity : 1
+        });
+    }
+    saveItem();
+    alert(`Product ${id} added to cart!`);
+}
+
 // Products Modal and popup section
 function openModal(id){
-    console.log("Clickrd id :", id)
-    console.log("Products: ", products)
+    // console.log("Clickrd id :", id)
+    // console.log("Products: ", products)
     const selectProduct = products.find(prod => prod.id === id);
-    console.log("Selecterd products: ", selectProduct);
+    // console.log("Selecterd products: ", selectProduct);
     if(!selectProduct) return;
 
     document.getElementById("modal-img").src = selectProduct.image;
@@ -48,14 +83,16 @@ function openModal(id){
     document.getElementById("modalPrice").textContent = `₹${selectProduct.price}`;
     document.getElementById("modal-description").textContent = selectProduct.description;
 
+    const modalBtn = document.getElementById("modal-cart-btn");
+    modalBtn.onclick = () => {
+        addToCart(selectProduct.id);
+        productModal.style.display = "none";
+    };
     productModal.style.display = "flex";
-
 }
+updateCartCount()
 
 
-function addToCart(id){
-    alert(`Product ${id} added to cart!`);
-}
 
 closeBtn.addEventListener('click', ()=>{
     productModal.style.display = 'none';
@@ -93,7 +130,7 @@ function filterProduct(searchTerm, category){
 
         const matchCatgory = category === "All" || product.category === category;
         return matchCatgory && matchSearch;
-    });
+    }); 
 
     if(filtered.length === 0){
         productGrid.innerHTML = `<p style ="grid-column:1/-1; text-style: center; font-size: 18px; color: #777; padding: 40px 0;">No Products Found!<p/>`;
