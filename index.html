@@ -22,7 +22,12 @@
           <a href="#">Shop<span>Ease</span></a>
         </div>
         <div class="search-box">
-          <input type="text" id="search-input" class="input" placeholder="Search products..." />
+          <input
+            type="text"
+            id="search-input"
+            class="input"
+            placeholder="Search products..."
+          />
           <button class="searchIcon">
             <i class="fa-solid fa-magnifying-glass"></i>
           </button>
@@ -35,7 +40,7 @@
 
         <!-- Home page  -->
 
-        <div class="cart-icon">
+        <div class="cart-icon" onclick="window.location.href = 'cart.html' ">
           <i class="fa-solid fa-cart-shopping"></i>
           <span id="cartCount">0</span>
         </div>
@@ -87,14 +92,16 @@
       <div class="product-grid" id="productGrid"></div>
     </section>
 
-
     <!-- footer secction start -->
 
     <footer class="footer">
       <div class="footerContainer">
         <div class="footerContent">
           <h3>Shop<span>Ease</span></h3>
-          <p>Your one-step destination for best deals on fashion, electronics, and lifestyle products.</p>
+          <p>
+            Your one-step destination for best deals on fashion, electronics,
+            and lifestyle products.
+          </p>
         </div>
         <div class="footerContent">
           <h4>Quick Link</h4>
@@ -126,21 +133,29 @@
         <span class="closeBtn">&times;</span>
         <div class="modalBody">
           <div class="modalImage">
-            <img id="modal-img" src="image/adidas-shoes4.jpg" alt="product image">
+            <img
+              id="modal-img"
+              src="image/adidas-shoes4.jpg"
+              alt="product image"
+            />
           </div>
           <div class="modalInfo">
             <h2 class="modalTitle" id="modalTitle">MEN - adidas - shoes</h2>
-            <p class="modal-category" id="modal-category">Category:  MEN - Shoes</p>
+            <p class="modal-category" id="modal-category">
+              Category: MEN - Shoes
+            </p>
             <p class="modalPrice" id="modalPrice">₹ 2,456</p>
             <p class="modal-description" id="modal-description">
               It is perfect shoes for men and comfortable for the all time.
             </p>
-            <button class="add-to-cartBtn modal-cart-btn" id="modal-cart-btn"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+            <button class="add-to-cartBtn modal-cart-btn" id="modal-cart-btn">
+              <i class="fa-solid fa-cart-plus"></i> Add to Cart
+            </button>
           </div>
         </div>
       </div>
     </div>
-    
+
     <script src="JS/products.js"></script>
     <script src="JS/script.js"></script>
   </body>
