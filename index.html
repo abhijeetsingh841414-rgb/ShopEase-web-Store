@@ -21,30 +21,26 @@
         <div class="logo">
           <a href="#">Shop<span>Ease</span></a>
         </div>
+
         <div class="search-box">
-          <input
-            type="text"
-            id="search-input"
-            class="input"
-            placeholder="Search products..."
-          />
-          <button class="searchIcon">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
+          <input type="text" id="search-input" class="input" placeholder="Search products..."/>
+          <button class="searchIcon"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
+
+    
         <ul class="navLinks">
           <li><a href="#home">Home</a></li>
           <li><a href="#">Products</a></li>
           <li><a href="#">Categories</a></li>
         </ul>
 
-        <!-- Home page  -->
-
-        <div class="cart-icon" onclick="window.location.href = 'cart.html' ">
+        <div class="cart-icon" onclick="window.location.href = 'cart.html'">
           <i class="fa-solid fa-cart-shopping"></i>
           <span id="cartCount">0</span>
         </div>
-        <!-- <div class="menuBar">
+      </div>
+
+        <!-- <div class="menuBar" id="menuBar">
           <i class="fa-solid fa-bars"></i>
         </div> -->
       </nav>
@@ -156,6 +152,7 @@
       </div>
     </div>
 
+    <script src="JS/cart.js"></script>
     <script src="JS/products.js"></script>
     <script src="JS/script.js"></script>
   </body>

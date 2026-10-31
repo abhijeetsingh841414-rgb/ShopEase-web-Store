@@ -34,65 +34,6 @@
       <h1 class="cart-title">Shopping Cart Details</h1>
 
       <div id="cart-content">
-        <div class="empty-cart-container">
-          <i
-            class="fa-solid fa-cart-arrow-down"
-            style="color: #ccc; font-size: 50px; margin-bottom: 15px"
-          ></i>
-          <h2>Your Cart is Currently Empty</h2>
-          <p style="color: #777; margin: 10px 0">
-            Looks like you haven't added anything to your cart yet.
-          </p>
-          <a href="index.html" class="btn">Start Shooping</a>
-        </div>
-        <table class="cart-table">
-          <thead>
-            <tr>
-              <th>Product</th>
-              <th>Price</th>
-              <th>Quantity</th>
-              <th>Subtotal</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <div class="cartItem">
-                  <img src="image/PUMA-shoes1.jpg" alt="Puma-shoes" />
-                  <span><strong>Men - PUMA-Shoes</strong></span>
-                </div>
-              </td>
-              <td>₹ 16000</td>
-              <td>
-                <button class="qty-btn" onclick="changeQuantity()">-</button>
-                <span style="margin: 0 8px;">1</span>
-                <button class="qty-btn" onclick="changeQuantity()">+</button>
-              </td>
-              <td>₹ 16000 * 5</td>
-              <td>
-                <button class="deleteBtn" onclick="removeItem()">
-                  <i class="fa-solid fa-trash-can"></i>
-                <button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="cartSummary">
-          <div class="summaryRow">
-            <span>Subtotal</span>
-            <span>₹ 254655</span>
-          </div>
-          <div class="summaryRow">
-            <span>Shipping fee</span>
-            <span>FREE</span>
-          </div>
-          <div class="summaryRow total">
-            <span>Total amount</span>
-            <span>₹ 12546</span>
-          </div>
-          <button class="btn" style="width: 100%; margin-top: 15px;" onclick="alert('Proceeding to Payment!')">Proceed to Checkout</button>
-        </div>
       </div>
     </div>
 

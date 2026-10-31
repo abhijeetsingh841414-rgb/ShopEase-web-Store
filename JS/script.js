@@ -5,6 +5,25 @@ const closeBtn = document.querySelector(".closeBtn");
 const searchInput = document.getElementById("search-input");
 const categoryCards = document.querySelectorAll(".category-card");
 const cartCountElement = document.getElementById("cartCount");
+// const menuBar = document.getElementById("menuBar");
+// const navMenu = document.getElementById("navMenu");
+
+
+// if(menuBar && navMenu){
+//     menuBar.addEventListener('click', () =>{
+//         navMenu.classList.toggle("active");
+
+//         const icon = menuBar.querySelector('i');
+//         if(navMenu.classList.contains("active")){
+//             icon.classList.remove('fa-bars');
+//             icon.classList.add('fa-xmark');
+//         }
+//         else{
+//             icon.classList.remove('fa-xmark');
+//             icon.classList.add('fa-bars')
+//         }
+//     })
+// }
 
 
 //  Rider Products in js
