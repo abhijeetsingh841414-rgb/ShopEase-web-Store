@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopEase | Checkout</title>
+    <link rel="stylesheet" href="checkout/checkout.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+      integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="index.html">Shop<span>Ease</span></a>
+        </div>
+
+        <ul class="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <!-- <li><a href="#categories">Categories</a></li> -->
+          <li><a href="cart.html">Cart</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="checkout-container">
+      <div class="checkoutTitle">Billing & Shopping Details</div>
+
+      <form id="form">
+        <div class="formSection">
+          <h3>1. Contact & Address Information</h3>
+
+          <div class="formFilds">
+            <label for="fullname">Full Name</label>
+            <input
+              type="text"
+              id="fullname"
+              placeholder="Enter your full name..."
+              required
+            />
+          </div>
+
+          <div class="formFilds">
+            <label for="phone">Phone Number</label>
+            <input
+              type="text"
+              id="phoneNumber"
+              placeholder="Enter 10-digit mobile number..."
+              required
+            />
+          </div>
+
+          <div class="formFilds">
+            <label for="address">Delivery Address</label>
+            <textarea
+              id="address"
+              placeholder="House no, Street Name, City, Pincode."
+              required
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="formSection">
+          <h3>2. Select Payment Method</h3>
+          <div class="payment-options">
+            <lable class="payment">
+              <input type="radio" name="payment" value="COD" checked />
+              <span
+                ><i
+                  class="fa-solid fa-truck"
+                  style="color: #ff523b; margin-right: 6px"
+                ></i>
+                Cash on Delivery (COD)</span
+              >
+            </lable>
+            <label class="payment">
+              <input type="radio" name="payment" value="Card" />
+              <span
+                ><i
+                  class="fa-regular fa-credit-card"
+                  style="color: #ff523b; margin-right: 6px"
+                ></i>
+                Credit / Debit Card
+              </span>
+            </label>
+          </div>
+        </div>
+        <button type="submit" class="placeOrderBtn">Place Order</button>
+      </form>
+    </div>
+  </body>
+</html>

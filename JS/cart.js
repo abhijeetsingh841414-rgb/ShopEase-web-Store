@@ -72,7 +72,7 @@ function displayCartPage(){
             <span>Total amount</span>
             <span>₹ ${subTotal}</span>
           </div>
-          <button class="btn" style="width: 100%; margin-top: 15px;" onclick="alert('Proceeding to Payment!')">Proceed to Checkout</button>
+          <button class="btn" style="width: 100%; margin-top: 15px;" onclick="window.location.href='checkout.html'">Proceed to Checkout</button>
         </div>
         `;
 
